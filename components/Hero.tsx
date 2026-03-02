@@ -1,15 +1,23 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-96 md:h-[600px] bg-gradient-to-r from-primary to-primary-dark overflow-hidden pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative w-full h-96 md:h-[600px] overflow-hidden pt-20 bg-black">
+      {/* Background Image */}
+      <Image
+        src="/images/hero-banner.jpg"
+        alt="Industrial casting manufacturing facility"
+        fill
+        className="object-cover"
+        priority
+        quality={85}
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-dark/80"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center items-center text-center">

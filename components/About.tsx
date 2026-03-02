@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 export default function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -31,13 +33,15 @@ export default function About() {
           </div>
 
           {/* Right Image */}
-          <div className="fade-in">
-            <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl h-96 md:h-full min-h-96 flex items-center justify-center shadow-xl">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">🏭</div>
-                <p className="text-xl font-semibold">Manufacturing Excellence</p>
-              </div>
-            </div>
+          <div className="fade-in relative">
+            <Image
+              src="/images/about-facility.jpg"
+              alt="AMCON Castings manufacturing facility"
+              width={500}
+              height={500}
+              className="rounded-2xl shadow-xl w-full h-full object-cover"
+              quality={85}
+            />
           </div>
         </div>
       </div>
