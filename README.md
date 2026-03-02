@@ -1,14 +1,18 @@
 # AMCON Castings - Next.js Website
 
-Modern Next.js implementation of the AMCON Castings website - a premier quality investment casting manufacturer.
+A modern, production-ready Next.js 15+ website for AMCON Castings, a premier quality investment casting manufacturer. Converted from WordPress/Elementor to provide superior performance, maintainability, and user experience.
 
-## Features
+## Key Features
 
-- **Responsive Design** - Mobile-first approach that works on all devices
-- **Modern UI** - Clean, professional design with smooth animations
-- **Performance Optimized** - Built with Next.js for fast loading and SEO
-- **Accessible** - Following accessibility best practices
-- **Component-Based** - Modular, reusable components for easy maintenance
+- **8 Fully Developed Sections** - Hero, About, Quick Facts, Products Carousel, Features, Testimonials, CTA, Footer
+- **Responsive Design** - Mobile-first approach with perfect UX on all devices
+- **Modern Tech Stack** - Next.js 15+, TypeScript, Tailwind CSS, React 19+
+- **Image Optimization** - All images optimized with Next/Image for fast loading
+- **SEO Optimized** - Meta tags, semantic HTML, structured data
+- **Smooth Animations** - CSS-based transitions and scroll animations
+- **High Performance** - Optimized bundle size, code splitting, lazy loading
+- **Accessible** - WCAG AA compliant, semantic HTML, ARIA labels
+- **Easy to Customize** - Centralized data management, modular components
 
 ## Project Structure
 
@@ -40,50 +44,56 @@ Modern Next.js implementation of the AMCON Castings website - a premier quality 
 - **Tailwind CSS** - Utility-first CSS framework
 - **React 19** - UI library
 
-## Getting Started
+## Quick Start (3 Steps)
 
-### Prerequisites
-- Node.js 18+ or higher
-- npm, yarn, pnpm, or bun
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd amcon-castings-nextjs
-```
-
-2. Install dependencies:
+### 1. Install Dependencies
 ```bash
 npm install
-# or
-yarn install
-# or
-pnpm install
-# or
-bun install
 ```
 
-3. Run the development server:
+### 2. Start Development Server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+### 3. Open in Browser
+Visit [http://localhost:3000](http://localhost:3000)
 
-## Building for Production
+## Prerequisites
+- Node.js 18 or higher
+- npm, yarn, pnpm, or bun package manager
+
+## Available Scripts
 
 ```bash
-npm run build
-npm run start
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Run production build locally
+npm run lint     # Lint code
+npm run type-check # TypeScript type checking
 ```
+
+## Deploy in 1 Minute
+
+### Option 1: Vercel (Recommended)
+```bash
+npm install -g vercel
+vercel --prod
+```
+
+### Option 2: GitHub → Auto-Deploy
+1. Push to GitHub
+2. Connect to Vercel dashboard
+3. Auto-deploys on every push
+
+### Option 3: Other Platforms
+- Netlify
+- AWS Amplify
+- Railway
+- Render
+- DigitalOcean
+
+See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for detailed instructions.
 
 ## Website Sections
 
@@ -140,31 +150,61 @@ npm run start
 - Social media links
 - Copyright notice
 
-## Customization
+## Documentation
 
-### Update Contact Information
-Edit `/lib/data.ts` to update phone, email, address, and social links:
+We've prepared comprehensive guides for different needs:
 
+### For Customization
+See [CUSTOMIZATION_GUIDE.md](./CUSTOMIZATION_GUIDE.md) for:
+- Changing colors and theme
+- Updating company information
+- Adding new products
+- Modifying testimonials
+- Updating content and text
+- Adding new sections
+
+### For Implementation Details
+See [IMPLEMENTATION_COMPLETE.md](./IMPLEMENTATION_COMPLETE.md) for:
+- Full feature documentation
+- Architecture overview
+- Component breakdown
+- Performance metrics
+- Browser support details
+
+### For Deployment
+See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for:
+- Step-by-step deployment instructions
+- Multiple platform options
+- Domain setup
+- SSL/HTTPS configuration
+- Monitoring and maintenance
+- Troubleshooting
+
+## Quick Customization
+
+### Update Contact Info
+Edit `/lib/data.ts`:
 ```typescript
 export const contactInfo = {
-  phone: "+1 (555) 123-4567",
-  email: "info@amconcastings.com",
-  address: "Your address here",
-  // ...
+  phone: "YOUR_PHONE",
+  email: "YOUR_EMAIL",
+  address: "YOUR_ADDRESS",
+  whatsapp: "YOUR_WHATSAPP",
 }
 ```
 
-### Change Colors
-Colors are defined in `tailwind.config.ts`. Primary color is orange (#f36421).
+### Change Primary Color
+Edit `/app/globals.css`:
+```css
+--color-primary: #YOUR_COLOR;
+--color-primary-dark: #DARKER_SHADE;
+```
 
-### Update Content
-All text content is stored in `/lib/data.ts`:
-- Navigation links
-- Quick facts
-- Products
-- Features
-- Testimonials
-- Statistics
+### Update Company Name
+Search and replace "AMCON Castings" throughout:
+- Components
+- Data files
+- Layout files
 
 ## Performance Optimizations
 
