@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState } from "react"
 import { products } from "@/lib/data"
 
@@ -39,16 +40,14 @@ export default function Products() {
                 className="bg-surface rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
               >
                 {/* Product Image */}
-                <div className="h-56 bg-gradient-to-br from-primary to-primary-dark overflow-hidden relative flex items-center justify-center">
-                  <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                    {product.id === 1 && "💧"}
-                    {product.id === 2 && "🏥"}
-                    {product.id === 3 && "🔧"}
-                    {product.id === 4 && "⚙️"}
-                    {product.id === 5 && "🚗"}
-                    {product.id === 6 && "🚜"}
-                    {product.id === 7 && "🔬"}
-                  </div>
+                <div className="h-56 bg-gray-300 overflow-hidden relative">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    quality={75}
+                  />
                 </div>
 
                 {/* Product Info */}
@@ -66,16 +65,14 @@ export default function Products() {
           {/* Mobile Single View */}
           <div className="md:hidden mb-8">
             <div className="bg-surface rounded-2xl overflow-hidden shadow-lg">
-              <div className="h-64 bg-gradient-to-br from-primary to-primary-dark overflow-hidden relative flex items-center justify-center">
-                <div className="text-7xl">
-                  {products[currentIndex].id === 1 && "💧"}
-                  {products[currentIndex].id === 2 && "🏥"}
-                  {products[currentIndex].id === 3 && "🔧"}
-                  {products[currentIndex].id === 4 && "⚙️"}
-                  {products[currentIndex].id === 5 && "🚗"}
-                  {products[currentIndex].id === 6 && "🚜"}
-                  {products[currentIndex].id === 7 && "🔬"}
-                </div>
+              <div className="h-64 bg-gray-300 overflow-hidden relative">
+                <Image
+                  src={products[currentIndex].image}
+                  alt={products[currentIndex].name}
+                  fill
+                  className="object-cover"
+                  quality={75}
+                />
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-text mb-3">{products[currentIndex].name}</h3>
