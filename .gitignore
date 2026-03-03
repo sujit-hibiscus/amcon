@@ -36,3 +36,12 @@ yarn-error.log*
 
 # OS
 Thumbs.db
+
+# WordPress Clone (old version)
+amconcastings.com/
+fonts.googleapis.com/
+unpkg.com/
+
+# Local database files
+*.db
+*.sqlite

@@ -7,10 +7,13 @@ export const metadata: Metadata = {
   title: "AMCON Castings - Premier Quality Investment Casting Manufacturer",
   description: "Leading investment casting manufacturer providing high-quality castings for industrial pumps, food & pharma, valves, automotive, agriculture, and instrumentation industries.",
   keywords: "investment casting, metal casting, industrial manufacturing, castings manufacturer",
+  authors: [{ name: "AMCON Castings" }],
+  creator: "AMCON Castings",
   openGraph: {
     title: "AMCON Castings - Premier Quality Investment Casting Manufacturer",
     description: "Leading investment casting manufacturer providing high-quality castings for various industries.",
     type: "website",
+    locale: "en_US",
   },
 }
 
@@ -19,6 +22,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 5,
   themeColor: "#f36421",
+  colorScheme: "light",
 }
 
 export default function RootLayout({
@@ -28,10 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body>
+      <body className="font-sans">
         <Header />
         <main>{children}</main>
         <Footer />

@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #f36421;
+  --color-primary-dark: #e55a1a;
+  --color-background: #ffffff;
+  --color-surface: #f4f4f4;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-border: #e0e0e0;
+  --radius: 0.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,9 +24,9 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
-  background-color: #ffffff;
-  color: #333333;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
   line-height: 1.6;
 }
 
@@ -26,11 +37,20 @@ a {
 
 button {
   cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -38,12 +58,12 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f36421;
+  background: var(--color-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e55a1a;
+  background: var(--color-primary-dark);
 }
 
 /* Animations */
@@ -73,4 +93,15 @@ button {
 
 .slide-up {
   animation: slideUp 0.6s ease-out;
+}
+
+/* Text utilities */
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
 }
